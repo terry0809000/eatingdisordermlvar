@@ -1,0 +1,36 @@
+# R session files
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+*.Rproj
+
+# Data
+data/raw/*
+!data/raw/README.md
+data/processed/*
+!data/processed/README.md
+
+# Outputs
+outputs/*
+!outputs/figures/
+!outputs/tables/
+!outputs/models/
+!outputs/figures/README.md
+!outputs/tables/README.md
+!outputs/models/README.md
+
+# Reports
+reports/*.pdf
+reports/*.docx
+reports/*.html
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log
+*.tmp

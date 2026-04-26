@@ -1,0 +1,15 @@
+name: R script sanity check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  parse-r-scripts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: r-lib/actions/setup-r@v2
+      - name: Check R script syntax
+        run: |
+          Rscript -e "parse('scripts/run_mlvar_analysis.R'); parse('scripts/mlvarfinaladjusted2.R'); parse('scripts/install_packages.R')"
