@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/project-cover.png" width="100%" alt="Conceptual scientific artwork for Eating Disorder Dynamics" /></p>
+
 # Eating disorder dynamics, one moment at a time
 
 **Affect · Body image · Eating-related symptoms · Maladaptive exercise**
