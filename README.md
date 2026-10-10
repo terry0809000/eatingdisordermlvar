@@ -1,4 +1,8 @@
-# Eating Disorder EMA mlVAR Network Analysis
+# Eating disorder dynamics, one moment at a time
+
+**Affect · Body image · Eating-related symptoms · Maladaptive exercise**
+
+A difficult day is rarely explained by a single feeling. This project follows the connections between feelings, thoughts and behaviours across everyday moments, asking what changes when maladaptive exercise enters the network.
 
 This repository contains an R workflow for an exercise-restricted ecological momentary assessment (EMA) network analysis of eating-disorder-related affective, cognitive, and behavioural variables. The analysis compares a base network with an additive network that includes maladaptive exercise (`mal_ex`) among observations where exercise was endorsed at the current survey.
 
@@ -48,6 +52,12 @@ Lagged predictors are defined using the immediately previous survey within the s
 ## Contemporaneous rule
 
 Contemporaneous networks are estimated only on target rows where `exercise_yn == 1` at time `t`.
+
+## Follow the pipeline
+
+`EMA surveys → order within participant and day → construct genuine previous-survey lags → select exercise-target rows → fit base and additive models → export networks, edges and centrality`
+
+See [PIPELINE.md](PIPELINE.md) for the execution map and reproducibility notes.
 
 ## Installation
 
@@ -106,3 +116,9 @@ centrality_methods_note.txt
 ## Privacy and data governance
 
 Do not commit raw EMA data, processed individual-level datasets, participant identifiers, or generated model outputs unless approved for public sharing. The `.gitignore` file excludes common data and output files by default.
+
+## Reading the networks with care
+
+The estimated edges describe associations within this selected EMA sample. They do not establish causal effects, diagnose an individual, or show that changing a node will improve health. Conditioning on exercise-target observations also limits which daily moments the networks describe.
+
+The cover is conceptual artwork about lived experience and temporal connections; it is not an empirical network or an anatomical result.
